@@ -19,7 +19,7 @@ public class Guia_8_Extras_Ejer_2 {
      */
     public static void main(String[] args) {
         NIFServicio ns = new NIFServicio();
-        NIF persona = new NIF(35030582,"");
+        NIF persona = new NIF();
        
         ns.crearNif(persona);
         ns.mostrar(persona);

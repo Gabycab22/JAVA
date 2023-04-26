@@ -6,6 +6,7 @@
 package Servicios;
 
 import Entidad.NIF;
+import java.util.Scanner;
 
 /**
  *
@@ -18,8 +19,11 @@ Método mostrar(): que nos permita mostrar el NIF (ocho dígitos, un guion y la 
 
 */
 public class NIFServicio {
+    private Scanner leer = new Scanner(System.in).useDelimiter("\n");
     String [] verificador = new String[]{"T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"};
     public void crearNif(NIF nombre){
+        System.out.println("Ingrese DNI: ");
+        nombre.setDni(leer.nextLong());
         int resto = (int) (nombre.getDni()%23);
         nombre.setLetra(verificador[resto]);
     }
